@@ -25,6 +25,18 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icons: [ // manually, so they go to static folder:
+          {
+            src: `/static/icons/android-icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `/static/icons/android-icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          }
+        ],
         cache_busting_mode: 'none',
       },
     },    

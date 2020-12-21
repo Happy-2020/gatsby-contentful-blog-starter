@@ -29,6 +29,26 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
   </header>
+  // <header>
+  //   <div class="container-fluid">
+  //     <div class="row">
+  //         <div class="col-lg-3 logo_section">
+  //           <div class="full">
+  //               <div class="center-desk">
+                 
+  //               </div>
+  //           </div>
+  //         </div>
+  //         <div class="col-lg-9">
+  //           <div class="menu-area">
+  //               <div class="limit-box">
+
+  //               </div>
+  //           </div>
+  //         </div>
+  //     </div>
+  //   </div>
+  // </header>
 )
 
 Header.propTypes = {
