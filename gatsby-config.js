@@ -55,8 +55,17 @@ module.exports = {
       options: {
         precachePages: [`/`, `/blogposts/`],
         workboxConfig: {
-          globPatterns: ['**/*']
-       } 
+          cacheId: `cmpV0.0.2a`,
+           globPatterns: ['**/*.{js,json,html,woff2,ttf,svg,png,jpg,pdf}'],
+           maximumFileSizeToCacheInBytes: 50000000,
+           cleanupOutdatedCaches: true,
+           runtimeCaching: [
+            {
+              urlPattern: /(\.js$|\.css$\/)/,
+              handler: `CacheFirst`,
+            },
+          ],        
+        } 
       },
     },
     {
