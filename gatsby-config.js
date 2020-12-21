@@ -35,6 +35,16 @@ module.exports = {
             src: `/static/icons/android-icon-72x72.png`,
             sizes: `72x72`,
             type: `image/png`,
+          },
+          {
+            src: `/static/icons/android-icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `/static/icons/android-icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
           }
         ],
         cache_busting_mode: 'none',
