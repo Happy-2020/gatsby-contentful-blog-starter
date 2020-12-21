@@ -25,6 +25,14 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        cache_busting_mode: 'none',
+      },
+    },    
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/blogposts/`],
+        globPatterns: ['**/icon-path*'],
       },
     },
     {
@@ -34,7 +42,13 @@ module.exports = {
       accessToken: `QUdpkKU53d6pX6uDdYpycZ6UkiMr0TunLsmhdXC6njI`
       }
     },
-    `gatsby-plugin-preact`
+    `gatsby-plugin-preact`,
+    {
+      resolve: 'gatsby-plugin-sw',
+      options: {
+        swPath: 'src/utils/my-service-worker.js', // Default to 'src/sw.js'
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
